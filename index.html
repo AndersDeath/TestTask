@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script type="text/javascript" src="./bower_components/konva/konva.min.js"></script>
+  <script type="text/javascript" src="./src/script.js"></script>
+  <script>
+    window.onload = function(){
+      var config = {
+        'stage':{
+          'id':'container',
+          'width':window.innerWidth,
+          'height':window.innerHeight
+        },
+        'grid':{
+          'columns':5,
+          'strokes':4,
+          'width':160,
+          'height':50,
+        },
+        'headers':{
+          'elements':[
+            {
+              'value':'Первый'
+            },
+            {
+              'value':'Второй'
+            },
+            {
+              'value':'Третий',
+              'drop':['Ссылка 1','Ссылка 2','Ссылка 3','Ссылка 4']
+            },
+            {
+              'value':'Четвертый'
+            },
+            {
+              'value':'Пятый'
+            }
+          ]
+        }
+      }
+     new TestTask(config);
+    }
+  </script>
+</head>
+<body>
+  <div id="container"></div>
+</body>
+</html>
